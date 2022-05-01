@@ -41,8 +41,8 @@ The analysis of the election show that:
 ## Election-Audit Summary
 Given how efficient this analysis was, we can look to use the same script for any election so long as we make sure to some small modifications.
 
-In our script we are able to easily identify and select the candidate name and county name by referencing the row index. For example we know that we can get the candidate name from column C or row[2] and we can get county name from column B or row[1] (see image below).
-![County and Candidate Names] ()
+In our script we are able to easily identify and select the candidate name and county name by referencing the row index. For example we know that we can get the candidate name from column C or row[2] and we can get county name from column B or row[1].
+![County and Candidate Names](https://github.com/scaslo2/election_analysis/blob/main/find%20county%20and%20candidate%20name.png)
 
-For future elections, we may not have standardized data formats and therefore it would be best practice to modify this section of the code to be more dynamic - to search for headers that identify the county and candidates names.
+For future elections, we may not have standardized data formats and therefore it would be best practice to modify this section of the code to be more dynamic - to search for headers that identify the county and candidates names and insert the row index based off of this.
 
