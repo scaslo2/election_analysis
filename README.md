@@ -37,12 +37,20 @@ The analysis of the election show that:
 6. The winner of the election was:
   - Diana DeGette, who received 73.8% of the vote and 272,892 number of votes.
 
+![election analysis results](https://github.com/scaslo2/election_analysis/blob/a832c4d652ca47212fc9be325a557d13a2e28173/election_analysis_results.png)
 
 ## Election-Audit Summary
-Given how efficient this analysis was, we can look to use the same script for any election so long as we make sure to some small modifications.
+Using this script, we are able to analyze huge datasets in a matter of seconds. This can be a critical tool for future election audits, to analyze results significantly faster and with significantly more accuracy than before. With only a few modifications, this same tool can be applied to any election.
 
-In our script we are able to easily identify and select the candidate name and county name by referencing the row index. For example we know that we can get the candidate name from column C or row[2] and we can get county name from column B or row[1].
+In our script we are able to easily identify and select the candidate name and county name by using the row[] array. For example, after looking at the .csv, we know that we can get the candidate name from column C or row[2] and we can get county name from column B or row[1].
 ![County and Candidate Names](https://github.com/scaslo2/election_analysis/blob/main/find%20county%20and%20candidate%20name.png)
 
-For future elections, we may not have standardized data formats and therefore it would be best practice to modify this section of the code to be more dynamic - to search for headers that identify the county and candidates names and insert the row index based off of this.
+For future elections, we may not have standardized data formats and therefore it would be best practice to modify this section of the code to be more dynamic - to be able to search for headers that identify the county and candidates names. Another way around this would be to add a section at the beginning of the script that would format the data for us. 
 
+
+Given that we only analyzed a state election if we want to use this same script for a different type of election, i.e. a presidential election, we would need to edit our variables. In our script we look at the county level:
+![County Names](https://github.com/scaslo2/election_analysis/blob/728192157a2e06fcc7639b2cf8cf2163e98ef73d/county_info.png)
+
+In a presidential election, we may want to analyze data for the state level. We could add to or alter the scipt above to have a list of states and a dictionary of the number of votes by state. We can then use this to show things like the state with the most number of votes for a president, the distribution of votes by state, etc. 
+
+With these small modifications we can utilize this script for any type of election and make sure to analyze our data in a more efficient manner. 
